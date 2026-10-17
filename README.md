@@ -7,26 +7,11 @@ A systematic evaluation framework for AI agents, built on Azure OpenAI and LangC
 ## Architecture
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│                         Orchestrator                             │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐          │
-│  │   Adapter    │  │ Deterministic│  │    Judge     │          │
-│  │  (Agent)     │──│   Metrics    │  │ (LLM-as-Judge)│          │
-│  └──────────────┘  └──────────────┘  └──────────────┘          │
-│         │                  │                  │                  │
-│         v                  v                  v                  │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐          │
-│  │AgentRunOutput│  │Deterministic │  │JudgedMetrics │          │
-│  └──────────────┘  └──────────────┘  └──────────────┘          │
-│                                                            │    │
-│                         TaskEvalResult                      │    │
-└────────────────────────────────────────────────────────────┼────┘
-                                                             │
-                                                             v
-                                                    ┌──────────────┐
-                                                    │   Report     │
-                                                    │  (JSON+MD)   │
-                                                    └──────────────┘
+Orchestrator
+├── Adapter (Agent) → AgentRunOutput
+├── Deterministic Metrics → DeterministicMetrics
+├── Judge (LLM-as-Judge) → JudgedMetrics
+└── TaskEvalResult → Report (JSON+MD)
 
 Calibration:
   Judge Results + Human Labels → Cohen's Kappa → Agreement Rate
