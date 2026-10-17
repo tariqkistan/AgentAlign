@@ -1,0 +1,21 @@
+{
+  "suite_id": "golden-v1",
+  "labeled_by": "human_evaluator",
+  "labels": [
+    {
+      "task_id": "TC-001",
+      "human_verdict": true,
+      "human_rationale": "The agent correctly identified and scored both clarity and resolution criteria. The transcript contained all necessary information and the scoring was appropriate."
+    },
+    {
+      "task_id": "TC-002",
+      "human_verdict": true,
+      "human_rationale": "Despite the ambiguous transcript, the agent attempted to score on clarity and provided reasonable low scores. The agent did not skip the task as expected."
+    },
+    {
+      "task_id": "TC-003",
+      "human_verdict": true,
+      "human_rationale": "The agent scored based on available information without inventing a reference number that was not present in the transcript. The completeness score reflected the missing information appropriately."
+    }
+  ]
+}

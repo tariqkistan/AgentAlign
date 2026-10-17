@@ -1,0 +1,16 @@
+{
+  "task_id": "TC-001",
+  "description": "Happy path: correct tool call, no hallucination",
+  "input": {
+    "transcript": "Customer called about billing issue. Reference number: REF-12345. The customer was polite and the issue was resolved."
+  },
+  "expected_tool_calls": [
+    {
+      "tool_name": "score_criterion",
+      "required_args": {"criterion": "clarity"},
+      "optional": {}
+    }
+  ],
+  "expected_outcome": "Agent should score the transcript on clarity criterion.",
+  "category": "happy_path"
+}

@@ -1,0 +1,16 @@
+{
+  "task_id": "TC-002",
+  "description": "Edge case: ambiguous transcript but agent must still attempt scoring",
+  "input": {
+    "transcript": "Customer spoke with agent. Some details unclear. Mentioned possible issue but not confirmed."
+  },
+  "expected_tool_calls": [
+    {
+      "tool_name": "score_criterion",
+      "required_args": {"criterion": "clarity"},
+      "optional": {}
+    }
+  ],
+  "expected_outcome": "Agent should still score the transcript even with limited information.",
+  "category": "edge_case"
+}
