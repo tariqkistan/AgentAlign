@@ -1,6 +1,6 @@
 # AgentAlign
 
-![CI](https://github.com/tariqkistan/AgentAlign/actions/workflows/ci.yml/badge.svg)
+[![CI](https://img.shields.io/github/actions/workflow/status/tariqkistan/AgentAlign/ci.yml?branch=master)](https://github.com/tariqkistan/AgentAlign/actions)
 
 A systematic evaluation framework for AI agents, built on Azure OpenAI and LangChain. AgentAlign measures task success rate, tool-call accuracy, hallucination rate, cost per task, and latency per step.
 
