@@ -1,7 +1,6 @@
 import os
 
 import structlog
-from structlog.types import Context, EventDict, WrappedLogger
 
 
 def configure_logger() -> structlog.typing.WrappedLogger:
