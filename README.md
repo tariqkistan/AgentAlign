@@ -4,9 +4,9 @@
 
 A systematic evaluation framework for AI agents, built on Azure OpenAI and LangChain. AgentAlign measures task success rate, tool-call accuracy, hallucination rate, cost per task, and latency per step.
 
-![AgentAlign overview](docs/images/agentalign-overview.png)
-
 ## Architecture
+
+![AgentAlign overview](docs/images/agentalign-overview.png)
 
 ```
 Orchestrator
