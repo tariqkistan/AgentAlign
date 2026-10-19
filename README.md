@@ -113,6 +113,14 @@ LLM-as-judge systems can have systematic biases or failure modes. Calibrating ag
 
 Cohen's kappa measures inter-rater agreement while accounting for chance agreement. Simple agreement rate can be misleading when tasks are easy (high agreement by chance) or when there's class imbalance. Kappa provides a more robust measure of judge quality, especially important when comparing different judge configurations.
 
+The formula:
+
+κ = (P_o − P_e) / (1 − P_e)
+
+P_o = observed agreement — the proportion of cases where the two raters actually agreed
+P_e = expected agreement — the proportion of agreement you’d expect purely by chance, given each rater’s tendency to pick each category
+1 − P_e = the maximum possible improvement over chance
+
 ### Why the Adapter Pattern
 
 The adapter pattern allows the evaluation harness to be agent-agnostic. Any agent can be evaluated by implementing the `AgentAdapter` interface with a single `run_task` method. This makes it easy to compare different agents, add new ones, and swap implementations without modifying the core evaluation logic.
