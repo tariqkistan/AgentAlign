@@ -4,6 +4,8 @@
 ![Python](https://img.shields.io/badge/python-3.11-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
+<a href="https://github.com/tariqkistan?tab=repositories"><img src="https://img.shields.io/badge/VIEW MY WORK-b4ff39?style=for-the-badge&logo=github&logoColor=white&labelColor=555555" alt="VIEW MY OTHER REPOS"></a>
+
 A systematic evaluation framework for AI agents, built on Azure OpenAI and LangChain. AgentAlign measures task success rate, tool-call accuracy, hallucination rate, cost per task, and latency per step.
 
 ## Overview
